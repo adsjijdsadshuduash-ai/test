@@ -1,0 +1,13 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "KietKat",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Kat",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "description": "W music app lololol",
+  "id": "KK"
+}

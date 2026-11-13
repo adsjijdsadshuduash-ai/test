@@ -1,0 +1,28 @@
+CHRISTMAS PIXEL KARAOKE - BAN APP CHO DIEN THOAI
+=================================================
+
+Thu muc nay la mot app web cai duoc (PWA): index.html + manifest.json + sw.js + icon.
+Chay duoc offline sau lan mo dau tien, co icon rieng tren man hinh chinh, mo toan man hinh nhu app that.
+
+CACH 1 - Cai nhu app (nhanh nhat, khong can APK)
+1. Dua ca thu muc len mot hosting HTTPS mien phi:
+   - Netlify Drop: vao app.netlify.com/drop, keo tha thu muc vao. Xong la co link.
+   - Hoac GitHub Pages / Cloudflare Pages.
+2. Tren dien thoai Android, mo link bang Chrome -> menu (3 cham) -> "Cai dat ung dung" / "Them vao man hinh chinh".
+   iPhone: Safari -> Chia se -> "Them vao man hinh chinh".
+3. Mo bang icon tren man hinh chinh. Cua so nho + nut X nhu ban may tinh.
+
+CACH 2 - Ra file APK that (tu link o Cach 1)
+1. Vao pwabuilder.com, dan link app vua host, bam Start.
+2. Chon "Package for stores" -> Android -> Generate. Tai file .zip ve, ben trong co file .apk de cai.
+3. Cai file .apk len dien thoai (bat "Cai ung dung tu nguon khong ro").
+   Luu y: ban APK ky thu cong chi de tu dung; muon len Google Play phai giu keystore.
+
+CACH 3 - Tu build APK bang Capacitor (can may tinh co Node.js va Android Studio)
+   npm init -y && npm i @capacitor/core @capacitor/cli @capacitor/android
+   npx cap init PixelKaraoke com.ban.pixelkaraoke --web-dir=PixelKaraoke_App
+   npx cap add android && npx cap sync
+   npx cap open android   (Android Studio -> Build -> Build APK)
+
+Them nhac: bam "+ Them nhac" trong app, chon file mp3 (kem file .lrc cung ten neu co loi).
+Nhac luu trong bo nho cua chinh app tren dien thoai do.
